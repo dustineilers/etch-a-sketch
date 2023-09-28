@@ -29,3 +29,28 @@ const colorPicker = document.getElementById('color-picker');
 const eraserBtn = document.getElementById('eraser-button');
 const resetBtn = document.getElementById('reset-button');
 const sizeSlider = document.getAnimations('size-slider');
+const grid = document.getElementById('grid');
+
+// Listen for inputs
+colorPicker.oninput = (e) => setNewColor(e);
+eraserBtn.onclick = () => setMode('erase');
+resetBtn.onclick = () =>resetGrid();
+sizeSlider.onmousemove = (e) => setNewSize(e.target.value);
+sizeSlider.onchange = (e) => setNewSize(e.target.value);
+
+function createGrid(size) {
+    grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+
+    for (let i = 0; i < size * size, i++) {
+        const gridSquare = document.createElement('div');
+        gridSquare.classList.add('grid-square');
+        gridSquare.addEventListener('mouseover', changeColor);
+        gridSquare.addEventListener('mousedown', changeColor);
+        grid.appendChild(gridSquare);
+    };
+};
+
+window.onload = () => {
+    createGrid(DEFAULT_SIZE)
+}

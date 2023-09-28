@@ -16,3 +16,7 @@
     align-items: flex-start;
     justify-content: space-between;
 }
+
+.grid-square {
+    background-color: gray;
+}
