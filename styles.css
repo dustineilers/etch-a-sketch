@@ -1,6 +1,8 @@
 .header {
     justify-content: center;
-    font-size: 30px
+    font-size: 30px;
+    font-family: Helvetica, sans-serif;
+    text-transform: uppercase;
 }
 
 .content {
