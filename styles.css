@@ -21,7 +21,7 @@ body {
     justify-content: space-between;
 }
 
-#grid {
+.grid {
     display: grid;
     width: 500px;
     height: 500px;
