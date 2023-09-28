@@ -1,3 +1,7 @@
+body {
+    background-color: #ededed;
+}
+
 .header {
     display: flex;
     justify-content: center;
@@ -17,6 +21,9 @@
     justify-content: space-between;
 }
 
-.grid-square {
-    background-color: gray;
+#grid {
+    display: grid;
+    width: 500px;
+    height: 500px;
+    background-color: #fff;
 }
