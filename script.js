@@ -52,17 +52,21 @@ function createGrid(size) {
         gridSquare.addEventListener('mouseover', setSquareColor);
         gridSquare.addEventListener('mousedown', setSquareColor);
         grid.appendChild(gridSquare);
-        console.log(i)
     };
 };
 
 function setSquareColor(e) {
     
-    if (e.type === 'mouseover' && !mouseDown) return
+    if (e.type === 'mouseover' && !mouseDown) return;
     else {
         e.target.style.backgroundColor = currentColor;
-    }
-}
+    };
+};
+
+function resetGrid() {
+    console.log("Creating new grid...")
+    createGrid(size);
+};
 
 window.onload = () => {
     createGrid(DEFAULT_SIZE);
