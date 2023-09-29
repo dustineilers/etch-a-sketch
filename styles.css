@@ -12,13 +12,24 @@ body {
 
 .content {
     display: flex;
+    justify-content: center;
 }
 
 .settings {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
+    align-items: start;
+    justify-content: space-evenly;
+}
+
+.settings button {
+    width: 120px;
+    height: 40px;
+}
+
+.settings input {
+    width: 120px;
+    height: 40px;
 }
 
 .grid {
@@ -26,4 +37,6 @@ body {
     width: 500px;
     height: 500px;
     background-color: #fff;
+    margin-left: 30px;
+    margin-right: 30px;
 }
