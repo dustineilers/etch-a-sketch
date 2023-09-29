@@ -24,8 +24,7 @@ function setMode(newMode) {
 };
 
 // Create variables for page elements
-
-const colorPicker = document.getElementById('color-picker');
+const colorPicker = document.getElementById('color-picker')
 const eraserBtn = document.getElementById('eraser-button');
 const resetBtn = document.getElementById('reset-button');
 const sizeSlider = document.getAnimations('size-slider');
@@ -63,9 +62,14 @@ function setSquareColor(e) {
     };
 };
 
+function clearGrid() {
+    grid.innerHTML = '';
+};
+
 function resetGrid() {
     console.log("Creating new grid...")
-    createGrid(size);
+    clearGrid()
+    createGrid(currentSize);
 };
 
 window.onload = () => {
