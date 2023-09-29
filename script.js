@@ -35,7 +35,7 @@ const grid = document.getElementById('grid');
 colorPicker.oninput = (e) => setNewColor(e);
 eraserBtn.onclick = () => setMode('erase');
 resetBtn.onclick = () =>resetGrid();
-sizeSlider.onmousemove = (e) => setNewSize(e.target.value);
+// sizeSlider.onmousemove = (e) => setNewSize(e.target.value);
 sizeSlider.onchange = (e) => setNewSize(e.target.value);
 
 let mouseDown = false
@@ -57,7 +57,11 @@ function createGrid(size) {
 };
 
 function setSquareColor(e) {
-    e.target.style.backgroundColor = currentColor;
+    
+    if (e.type === 'mouseover' && !mouseDown) return
+    else {
+        e.target.style.backgroundColor = currentColor;
+    }
 }
 
 window.onload = () => {
