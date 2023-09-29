@@ -45,13 +45,14 @@ document.body.onmouseup = () => (mouseDown = false)
 function createGrid(size) {
     grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
-
+    console.log("Creating grid..")
     for (let i = 0; i < size * size, i++) {
         const gridSquare = document.createElement('div');
         gridSquare.classList.add('grid-square');
         gridSquare.addEventListener('mouseover', changeColor);
         gridSquare.addEventListener('mousedown', changeColor);
         grid.appendChild(gridSquare);
+        console.log(i)
     };
 };
 
