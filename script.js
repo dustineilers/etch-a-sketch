@@ -27,6 +27,7 @@ function setMode(newMode) {
 const colorPicker = document.getElementById('color-picker');
 const eraserBtn = document.getElementById('eraser-button');
 const resetBtn = document.getElementById('reset-button');
+const sizeValue = document.getElementById('size-value')
 const sizeSlider = document.getAnimations('size-slider');
 const grid = document.getElementById('grid');
 
