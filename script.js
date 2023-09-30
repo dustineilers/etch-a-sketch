@@ -24,7 +24,7 @@ function setMode(newMode) {
 };
 
 // Create variables for page elements
-const colorPicker = document.getElementById('color-picker')
+const colorPicker = document.getElementById('color-picker');
 const eraserBtn = document.getElementById('eraser-button');
 const resetBtn = document.getElementById('reset-button');
 const sizeSlider = document.getAnimations('size-slider');
@@ -33,13 +33,19 @@ const grid = document.getElementById('grid');
 // Listen for inputs
 colorPicker.oninput = (e) => setNewColor(e);
 eraserBtn.onclick = () => setMode('erase');
-resetBtn.onclick = () =>resetGrid();
+resetBtn.onclick = () => resetGrid();
 // sizeSlider.onmousemove = (e) => setNewSize(e.target.value);
 sizeSlider.onchange = (e) => setNewSize(e.target.value);
 
-let mouseDown = false
-document.body.onmousedown = () => (mouseDown = true)
-document.body.onmouseup = () => (mouseDown = false)
+let mouseDown = false;
+document.body.onmousedown = () => (mouseDown = true);
+document.body.onmouseup = () => (mouseDown = false);
+
+function changeSize(value) {
+    setNewSize(size);
+    sizeValue.innerHTML = `${value} x ${value}`;
+    resetGrid();
+};
 
 function createGrid(size) {
     grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
